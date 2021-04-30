@@ -1,0 +1,124 @@
+/* the default background */
+body{
+    width: auto;
+    background: radial-gradient(ellipse,var(--lPurple), var(--dPurple));
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    margin: 8px;
+    display: inline;
+    width: 30%;
+    
+}
+nav ul{
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav li{
+    float: left;
+}
+
+a{
+    text-decoration: none;
+}
+nav a:link{
+    display: block;
+    
+    padding: 4px;
+    margin: 0px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+}
+nav a:hover ,nav a:focus{
+    color: var(--lBrown);
+    background-color: var(--dPurple);
+}
+:root{
+    /* the color scheme */
+    --lBlue: #7cbdeb;
+    --dBlue: #4D5A9E;
+    --lBrown: #e4d8da;
+    --lPurple: #AD5389;
+    --dPurple: #3C1053;
+}
+
+
+
+p
+{
+    
+    padding: 6px;
+    margin: 5%;
+}
+.textbox{
+    /*
+    for any normal text
+    */
+    background-color: var(--lBrown);
+    font-size: large;
+    color: var(--dPurple) ;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--dBlue);
+    text-align: center;
+}
+#centering{
+    display: flex;
+    width: 100%;
+    flex-direction: column; 
+    align-items: center;
+}
+.superheading{  
+    /*
+    for very important headings
+    */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    font-size: 1000%;
+    color: var(--lBlue);
+    text-shadow: 2px 2px 5px var(--lBlue);
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    clear: both;
+}
+.hovel{  /* border rounding transition */
+    
+border-radius: 0px;
+transition: border-radius 0.5s ,background-color 0.5s, color 0.5s;
+}
+.hovel:hover ,.hovel:focus{
+border-radius: 12px;
+}
+@keyframes cool{
+    /* 0%{color: red;}
+    17%{color: #ffff00;}
+    38%{color: #00ff00;}
+    55%{color: cyan;}
+    72%{color: blue;}
+    89%{color: magenta;}
+    100%{color: red;} */
+    0%{ 
+        color: var(--lPurple);
+        transform: rotate(17deg);
+    }
+    50%{ 
+        color: var(--dPurple);
+        transform: rotate(-17deg);
+    }
+    100%{ 
+        color: var(--lPurple);
+        transform: rotate(17deg);
+    }
+}
+.animated{
+    animation-name: cool;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
